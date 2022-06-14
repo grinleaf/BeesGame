@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="1dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/line_iv01"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/line_style02"/>
+
+        <Button
+            android:id="@+id/how_to_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="#F3A39D"
+            android:fontFamily="@font/bamin"
+            android:text="How To Play"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_00">
+
+        <RelativeLayout
+            android:id="@+id/layout_flower01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/flower01"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/flower01"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/select_flower01_bee"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bee04"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_flower01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_flower02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/flower02"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/flower01"
+                android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/select_flower02_bee"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bee04"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/tv_flower02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="0"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_flower03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/flower03"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/flower01"
+                android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/select_flower03_bee"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bee04"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/tv_flower03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="0"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        >
+
+        <ImageView
+            android:id="@+id/record_board_bg"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/floral_border" />
+
+        <TextView
+            android:id="@+id/record_board_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/bamin"
+            android:text="Record"
+            android:textColor="#FBBEA2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/record_board_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/record_board_title"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/bamin"
+            android:text=" "
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp">
+
+        <ImageView
+            android:id="@+id/chance_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/honey_pot"/>
+
+        <TextView
+            android:id="@+id/chance_count"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/chance_img"
+            android:layout_weight="1"
+            android:fontFamily="@font/bamin"
+            android:gravity="center_vertical"
+            android:text="총 9번의 기회"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/chance_count"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/reset"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/bamin"
+            android:text="GO"
+            android:textColor="#404040"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/chance_count"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="#EDA437"
+            android:fontFamily="@font/bamin"
+            android:text="RESET"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_04"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout_05"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                android:clickable="true"
+                app:cardCornerRadius="8dp"
+                android:background="@color/card_default"
+                android:tooltipText="1">
+
+                <ImageView
+                    android:id="@+id/bee01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="1"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="2">
+
+                <ImageView
+                    android:id="@+id/bee02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="2"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="3">
+
+                <ImageView
+                    android:id="@+id/bee03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="3"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="4">
+
+                <ImageView
+                    android:id="@+id/bee04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="4"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="5">
+
+                <ImageView
+                    android:id="@+id/bee05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="5"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_06"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="6">
+
+                <ImageView
+                    android:id="@+id/bee06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="6"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="7">
+
+                <ImageView
+                    android:id="@+id/bee07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                android:id="@+id/tv_bee07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="7"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="8">
+
+                <ImageView
+                    android:id="@+id/bee08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="8"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="9">
+
+                <ImageView
+                    android:id="@+id/bee09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="9"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_card10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp"
+                android:clickable="true"
+                android:background="@color/card_default"
+                android:tooltipText="10">
+
+                <ImageView
+                    android:id="@+id/bee10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/bee02"/>
+                <TextView
+                    android:id="@+id/tv_bee10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="10"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/line_iv02"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/line_style02" />
+    </LinearLayout>
+</LinearLayout>
